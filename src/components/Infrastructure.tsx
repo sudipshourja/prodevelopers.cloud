@@ -45,7 +45,7 @@ export default function Infrastructure() {
               as a <span className="text-neutral-500 text-pretty">Specialized Craft.</span>
             </h3>
             <p className="text-neutral-500 text-sm md:text-base leading-relaxed max-w-md">
-              We don't just deploy to the cloud; we engineer the cloud. Our systems are designed to minimize OPEX while maximizing throughput and privacy.
+              We don&apos;t just deploy to the cloud; we engineer the cloud. Our systems are designed to minimize OPEX while maximizing throughput and privacy.
             </p>
           </div>
 

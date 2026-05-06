@@ -1,4 +1,4 @@
-import { Server, Activity, Shield, Video, Globe } from 'lucide-react';
+import { Server, Shield, Video, Globe } from 'lucide-react';
 
 const solutions = [
   {
