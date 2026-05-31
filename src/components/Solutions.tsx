@@ -1,4 +1,5 @@
 import { Server, Shield, Video, Globe } from 'lucide-react';
+import Link from 'next/link';
 
 const solutions = [
   {
@@ -13,21 +14,24 @@ const solutions = [
     description: "Integrating real-time video surveillance with high-concurrency GPS tracking. Sub-500ms video latency over low-bandwidth cellular networks.",
     icon: Video,
     stats: "Sub-500ms Latency",
-    tech: ["WebRTC", "Traccar", "SQLite", "Wireguard"]
+    tech: ["WebRTC", "Traccar", "SQLite", "Wireguard"],
+    slug: "fleetcam-gps-video"
   },
   {
     title: "CCTV Cloud VMS (Zero-Trust)",
     description: "Client-side encrypted surveillance storage on commodity object storage. Ensuring privacy where even the cloud provider cannot access the footage.",
     icon: Shield,
     stats: "AES-256 E2EE",
-    tech: ["Google Cloud Storage", "Wireguard", "AES-256", "Python"]
+    tech: ["Google Cloud Storage", "Wireguard", "AES-256", "Python"],
+    slug: "cctv-cloud-vms"
   },
   {
     title: "Edge-Native Media Pipeline",
     description: "Scale-to-zero transcoding using FFmpeg and serverless containers. Professional video delivery without per-minute or egress markups.",
     icon: Server,
     stats: "Zero Egress Fees",
-    tech: ["FFmpeg", "Cloudflare Workers", "Durable Objects", "HLS"]
+    tech: ["FFmpeg", "Cloudflare Workers", "Durable Objects", "HLS"],
+    slug: "edge-native-media-pipeline"
   }
 ];
 
@@ -44,33 +48,63 @@ export default function Solutions() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-900 border border-neutral-900">
-          {solutions.map((item, index) => (
-            <div key={index} className="bg-neutral-950 p-8 md:p-12 space-y-8 hover:bg-neutral-900/50 transition-colors group">
-              <div className="flex justify-between items-start">
-                <div className="p-3 rounded-sm border border-neutral-800 bg-neutral-900/50 group-hover:border-purple-500/50 transition-colors">
-                  <item.icon className="w-6 h-6 text-neutral-400 group-hover:text-purple-500 transition-colors" />
-                </div>
-                <span className="font-mono text-[10px] text-purple-500 uppercase tracking-widest bg-purple-500/10 px-2 py-1 rounded-sm border border-purple-500/20">
-                  {item.stats}
-                </span>
-              </div>
-              
-              <div className="space-y-4">
-                <h4 className="text-xl md:text-2xl font-semibold text-neutral-50">{item.title}</h4>
-                <p className="text-neutral-500 text-sm md:text-base leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-
-              <div className="pt-4 flex flex-wrap gap-2">
-                {item.tech.map((t, i) => (
-                  <span key={i} className="text-[9px] font-mono text-neutral-400 uppercase tracking-tighter border border-neutral-900 px-2 py-1 rounded-sm">
-                    {t}
+          {solutions.map((item, index) => {
+            const CardContent = (
+              <>
+                <div className="flex justify-between items-start">
+                  <div className="p-3 rounded-sm border border-neutral-800 bg-neutral-900/50 group-hover:border-purple-500/50 transition-colors">
+                    <item.icon className="w-6 h-6 text-neutral-400 group-hover:text-purple-500 transition-colors" />
+                  </div>
+                  <span className="font-mono text-[10px] text-purple-500 uppercase tracking-widest bg-purple-500/10 px-2 py-1 rounded-sm border border-purple-500/20">
+                    {item.stats}
                   </span>
-                ))}
+                </div>
+                
+                <div className="space-y-4">
+                  <h4 className="text-xl md:text-2xl font-semibold text-neutral-50 group-hover:text-purple-400 transition-colors">{item.title}</h4>
+                  <p className="text-neutral-500 text-sm md:text-base leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-neutral-900/50">
+                  <div className="flex flex-wrap gap-2">
+                    {item.tech.map((t, i) => (
+                      <span key={i} className="text-[9px] font-mono text-neutral-400 uppercase tracking-tighter border border-neutral-900 px-2 py-1 rounded-sm">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  {item.slug && (
+                    <span className="text-xs font-mono text-purple-500 group-hover:text-purple-400 inline-flex items-center transition-colors">
+                      Deep-Dive &rarr;
+                    </span>
+                  )}
+                </div>
+              </>
+            );
+
+            if (item.slug) {
+              return (
+                <Link 
+                  key={index} 
+                  href={`/solutions/${item.slug}`}
+                  className="bg-neutral-950 p-8 md:p-12 space-y-8 hover:bg-neutral-900/30 transition-all duration-300 group border border-transparent hover:border-purple-500/10 flex flex-col justify-between"
+                >
+                  {CardContent}
+                </Link>
+              );
+            }
+
+            return (
+              <div 
+                key={index} 
+                className="bg-neutral-950 p-8 md:p-12 space-y-8 transition-colors flex flex-col justify-between"
+              >
+                {CardContent}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

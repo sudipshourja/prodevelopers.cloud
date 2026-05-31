@@ -22,3 +22,7 @@ yarn-error.log*
 # Other
 build/
 dist/
+
+# Gemini
+.gemini/
+
