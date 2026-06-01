@@ -3,8 +3,8 @@
 import { useState } from "react";
 import {
   ArrowLeft, Cpu, Database, ArrowUpRight,
-  Play, ShieldCheck,
-  Server, HardDrive, Zap, ZapOff, PlayCircle, Globe, Video
+  Play,
+  HardDrive, Zap, ZapOff, PlayCircle, Globe
 } from "lucide-react";
 import Link from "next/link";
 import DemoModal from "@/components/DemoModal";
@@ -38,20 +38,20 @@ export default function EdgeNativeMediaClient() {
 
         {/* Hero Section */}
         <header className="space-y-6 md:space-y-8 max-w-4xl">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-purple-500/10 bg-purple-500/5">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-purple-500/20 bg-purple-500/10">
             <Zap className="w-3 h-3 text-purple-400 animate-pulse" />
-            <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-widest text-purple-400">Edge-Native Infrastructure</span>
+            <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-widest text-purple-400 font-semibold">Self-Hosted Cloud License</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.1] text-neutral-50">
             Edge-Native Media Pipeline <br />
             <span className="text-neutral-500 text-2xl sm:text-4xl md:text-5xl text-pretty">
-              High-efficiency transcoding & serverless video delivery.
+              High-efficiency transcoding. <br />Licensed self-hosted deployment.
             </span>
           </h1>
 
           <p className="text-base md:text-lg text-neutral-400 leading-relaxed max-w-3xl">
-            A custom, enterprise-grade media ecosystem that leverages Cloudflare R2, Workers, and Durable Objects to perform automated, scale-to-zero FFmpeg multi-bitrate packaging. Completely eliminates egress fees and expensive "per-minute" platform markups.
+            A custom, enterprise-grade media ecosystem designed as licensed software for self-managed cloud deployment. Run the entire scale-to-zero media pipeline using your own Cloudflare and serverless infrastructure, guaranteeing absolute ownership of your video streams, assets, and databases.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
@@ -73,6 +73,37 @@ export default function EdgeNativeMediaClient() {
             </a>
           </div>
         </header>
+
+        {/* Service Model & Cross-Linking Section */}
+        <section className="border border-purple-500/20 bg-gradient-to-r from-neutral-950 via-purple-950/10 to-neutral-950 p-8 md:p-12 rounded-sm space-y-6 md:space-y-8" id="service-model">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-8 space-y-4">
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-purple-500/20 bg-purple-500/10 text-purple-400 font-mono text-[9px] uppercase tracking-widest font-semibold">
+                Licensed Software
+              </div>
+              <h3 className="text-2xl md:text-3xl font-semibold text-neutral-50 tracking-tight">
+                Self-Hosted Media Engine & Full Infrastructure Control
+              </h3>
+              <p className="text-sm md:text-base text-neutral-400 leading-relaxed max-w-3xl">
+                Purchase a software license to deploy this entire media pipeline inside your own Cloudflare environment (R2, Workers, and Durable Objects) and serverless containers. Pay pure cloud platform pricing directly, with absolute data privacy and zero middleman markups.
+              </p>
+            </div>
+            <div className="lg:col-span-4 lg:text-right border-t lg:border-t-0 lg:border-l border-neutral-900 pt-6 lg:pt-0 lg:pl-8 space-y-4">
+              <p className="text-xs text-neutral-500 leading-relaxed font-sans">
+                Prefer a zero-overhead, plug-and-play solution? Get this entire system as a fully managed SaaS instead.
+              </p>
+              <a
+                href="https://prodevelopers.tech/work/edge-native-media-pipeline"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-xs font-mono uppercase tracking-widest text-purple-400 hover:text-purple-300 font-bold group"
+              >
+                Go to Managed Edition
+                <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-purple-400" />
+              </a>
+            </div>
+          </div>
+        </section>
 
         {/* Technical Architecture Section */}
         <section className="space-y-10 border-t border-neutral-900 pt-16" id="architecture">

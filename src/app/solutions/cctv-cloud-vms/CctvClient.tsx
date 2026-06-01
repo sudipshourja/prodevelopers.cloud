@@ -4,7 +4,7 @@ import { useState } from "react";
 import {
   ArrowLeft, Shield, Server, Cpu, Database,
   Network, Lock, ArrowUpRight,
-  Play, RefreshCw, ShieldCheck
+  Play, RefreshCw
 } from "lucide-react";
 import Link from "next/link";
 import DemoModal from "@/components/DemoModal";
@@ -52,20 +52,20 @@ export default function CctvClient() {
 
         {/* Hero Section */}
         <header className="space-y-6 md:space-y-8 max-w-4xl">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-purple-500/10 bg-purple-500/5">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-purple-500/20 bg-purple-500/10">
             <Shield className="w-3 h-3 text-purple-400 animate-pulse" />
-            <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-widest text-purple-400">Zero-Trust Cloud VMS</span>
+            <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-widest text-purple-400 font-semibold">Self-Hosted Cloud License</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.1] text-neutral-50">
             CCTV Cloud VMS <br />
             <span className="text-neutral-500 text-2xl sm:text-4xl md:text-5xl text-pretty">
-              Client-side encrypted surveillance on commodity storage.
+              Client-side encrypted surveillance. <br />Licensed self-managed deployment.
             </span>
           </h1>
 
           <p className="text-base md:text-lg text-neutral-400 leading-relaxed max-w-3xl">
-            A comprehensive, cloud-native Video Management System (VMS) that eliminates upfront hardware costs, scales dynamically on Google Cloud Storage, and guarantees 100% privacy via client-side envelope encryption.
+            A comprehensive, cloud-native Video Management System (VMS) designed as licensed software for self-managed deployment. Run the entire secure, zero-trust pipeline directly in your Google Cloud environment, paying raw cloud costs with absolute code and infrastructure ownership.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
@@ -87,6 +87,37 @@ export default function CctvClient() {
             </a>
           </div>
         </header>
+
+        {/* Service Model & Cross-Linking Section */}
+        <section className="border border-purple-500/20 bg-gradient-to-r from-neutral-950 via-purple-950/10 to-neutral-950 p-8 md:p-12 rounded-sm space-y-6 md:space-y-8" id="service-model">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-8 space-y-4">
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-purple-500/20 bg-purple-500/10 text-purple-400 font-mono text-[9px] uppercase tracking-widest font-semibold">
+                Licensed Software
+              </div>
+              <h3 className="text-2xl md:text-3xl font-semibold text-neutral-50 tracking-tight">
+                Self-Managed Deployment & Complete Infrastructure Ownership
+              </h3>
+              <p className="text-sm md:text-base text-neutral-400 leading-relaxed max-w-3xl">
+                Deploy this entire application directly within your own cloud architecture (GCP, AWS, or Cloudflare) via a software license. Pay raw cloud costs with zero middleman markups, customize any layer of the codebase, and bill yourself directly.
+              </p>
+            </div>
+            <div className="lg:col-span-4 lg:text-right border-t lg:border-t-0 lg:border-l border-neutral-900 pt-6 lg:pt-0 lg:pl-8 space-y-4">
+              <p className="text-xs text-neutral-500 leading-relaxed font-sans">
+                Prefer a zero-overhead, plug-and-play solution where we handle 100% of server maintenance and updates? Check out our fully managed SaaS edition.
+              </p>
+              <a
+                href="https://prodevelopers.tech/work/cctv-cloud-vms"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-xs font-mono uppercase tracking-widest text-purple-400 hover:text-purple-300 font-bold group"
+              >
+                Go to Managed Edition
+                <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-purple-400" />
+              </a>
+            </div>
+          </div>
+        </section>
 
         {/* Technical Architecture Section */}
         <section className="space-y-10 border-t border-neutral-900 pt-16" id="architecture">
