@@ -325,7 +325,7 @@ export default function CctvClient() {
             <div className="lg:col-span-5 p-8 rounded-sm border border-purple-500/20 bg-purple-950/10 flex flex-col justify-between space-y-8">
               <div className="space-y-4">
                 <span className="font-mono text-[9px] uppercase tracking-widest text-purple-400 bg-purple-500/10 px-2 py-1 border border-purple-500/20 rounded-sm">
-                  ProDevelopers Pricing Estimate
+                  prodevelopers Pricing Estimate
                 </span>
                 <p className="text-sm text-neutral-400 leading-relaxed pt-2">
                   Estimated monthly cloud cost including GCS lifecycle optimization, client-side block compression, and zero-egress streaming architecture.

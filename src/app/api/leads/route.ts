@@ -58,7 +58,7 @@ export async function POST(request: Request) {
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>New ProDevelopers Lead</title>
+        <title>New prodevelopers Lead</title>
         <style>
           body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -210,7 +210,7 @@ export async function POST(request: Request) {
 
     // 5. Send Mail
     await transporter.sendMail({
-      from: `ProDevelopers Portal <${senderEmail}>`,
+      from: `prodevelopers Portal <${senderEmail}>`,
       to: recipientEmail,
       subject: `🔥 New Lead: Demo Unlocked by ${name}${company ? ` (${company})` : ""}`,
       html: emailHtml,

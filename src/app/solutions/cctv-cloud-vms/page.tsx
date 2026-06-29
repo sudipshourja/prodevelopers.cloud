@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import CctvClient from "./CctvClient";
 
 export const metadata: Metadata = {
-  title: "CCTV Cloud VMS (Zero-Trust) | ProDevelopers Cloud",
+  title: "CCTV Cloud VMS (Zero-Trust) | prodevelopers Cloud",
   description: "A comprehensive Cloud Video Management System with client-side AES-256 encryption on Google Cloud Storage. High-stakes surveillance engineering, Wireguard VPN meshes, and sub-500ms video playback latency.",
   openGraph: {
-    title: "CCTV Cloud VMS (Zero-Trust) | ProDevelopers Cloud",
+    title: "CCTV Cloud VMS (Zero-Trust) | prodevelopers Cloud",
     description: "Cloud surveillance without upfront hardware. Client-side encrypted footage on Google Cloud Storage. 100% private, Wireguard-powered remote camera links.",
     url: "https://prodevelopers.cloud/solutions/cctv-cloud-vms",
-    siteName: "ProDevelopers Cloud",
+    siteName: "prodevelopers Cloud",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "CCTV Cloud VMS System Architecture | ProDevelopers",
+        alt: "CCTV Cloud VMS System Architecture | prodevelopers",
       },
     ],
     locale: "en_US",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CCTV Cloud VMS (Zero-Trust) | ProDevelopers Cloud",
+    title: "CCTV Cloud VMS (Zero-Trust) | prodevelopers Cloud",
     description: "Zero-trust surveillance systems with client-side encryption. Secure Google Cloud Storage integration.",
     images: ["/og-image.png"],
   },
