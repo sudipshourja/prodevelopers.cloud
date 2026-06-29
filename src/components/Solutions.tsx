@@ -40,7 +40,7 @@ export default function Solutions() {
     <section id="solutions" className="py-20 md:py-32 bg-neutral-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="mb-16 md:mb-24">
-          <h2 className="font-mono text-[10px] uppercase tracking-widest text-purple-500 font-semibold mb-4">Case Studies</h2>
+          <h2 className="font-mono text-[10px] uppercase tracking-widest text-purple-500 font-semibold mb-4">Products</h2>
           <h3 className="text-3xl md:text-5xl font-semibold text-neutral-50 max-w-2xl leading-tight">
             Architectural solutions for <br className="hidden sm:block" />
             <span className="text-neutral-500">uncompromising requirements.</span>
